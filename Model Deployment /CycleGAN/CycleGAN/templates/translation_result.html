@@ -1,0 +1,8 @@
+<h2>Translated Image:</h2>
+<img src="{{ translated_image.translated_image.url }}" alt="Translated Image">
+
+{% if has_verification %}
+    <h2>Verification Image:</h2>
+    <img src="{{ translated_image.verification_image.url }}" alt="Verification Image">
+{% endif %}
+

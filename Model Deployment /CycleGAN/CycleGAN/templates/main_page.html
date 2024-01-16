@@ -1,0 +1,30 @@
+<!--
+<html>
+<head>
+    <title>Translation Options</title>
+</head>
+<body>
+    <h1>Select Translation Option You Prefer</h1>
+
+    <form method="post" action="{% url 'translation_page' %}">
+        <label for="translation-option"> Select Translation Option: </label>
+        <select name="translation_option" id="translation-option">
+            <option value="horse_to_zebra"> Horse to Zebra </option>
+            <option value="zebra_to_horse"> Zebra to Horse </option>
+        </select>
+
+        <br>
+
+        <label for="verification-source"> Do you have a verification source? </label>
+        <input type="checkbox" name="verification_source" id="verification-source">
+
+</body>
+</html>
+
+-->
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
